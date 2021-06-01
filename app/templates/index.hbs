@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Welcome</h1>
+
+  <p>You are currently in the CRaKN Demo project, mostly likely for an interview.  Let me start off with expressing how excited we are to have you here!</p>
+
+  <p>This project consists of two challenges.  Don't worry if you can't complete them, Ember is not a common JS Framework - but we think you'll like it.  The purpose of these challenges is for us to evaluate how you approach a specific task, not necessarily whether or not you can complete it.</p>
+
+  <p>If you need any Ember specific help, please refer to their documentation at <a href="https://guides.emberjs.com/release/">guides.emberjs.com</a></p>
+
+  <h3>Tables &amp; Loops</h3>
+
+  <p>At CRaKN we work with decedents and the death events based around them.  When a loved one passes and is admitted to a funeral home is commonly referred to as a Case.  Some of our Clients have a few a year, others a few a day.</p>
+
+  <p>We have an API returning a few cases that we would like to populate into a table.  Someone has already done a lot of the work, but we need you to take it home.  Please wire up the app/templates/index.hbs template to loop through the cases and display the following fields as columns:</p>
+
+  <ul>
+    <li>First Name</li>
+    <li>Last Name</li>
+    <li>Location</li>
+    <li>Next of Kin</li>
+    <li>NOK Phone #</li>
+  </ul>
+
+  <p>If you want to take a look at the model, it is app/models/decendent.js</p>
+
+  <h4>Extra Credit</h4>
+
+  <p>Sometimes we need to be a little more careful about what data we display and when.  One client has requested to only display the NOK Phone # when they click a show button.  We already have a component that does this - PhoneRevealer.  Please use that to display the phone number.</p>
+
+  <h3>Submitting Forms</h3>
+
+  <p>The funeral industry is amazingly still a paper form industry.  You would think in this day and age it would have evolved more.  While we are pushing that agenda here at CRaKN, we still have to mimic the paper workflow.  Which means we are dealing with form entry - a lot.</p>
+
+  <p>We have a basic vital statistics (jargon - don't worry about it) form that we need to submit to our API.  We forgot to add the Last Name field and the form isn't actually saving anything.  We need you to add the missing field to app/templates/forms.hbs and also make sure the field is actually saving the data (app/controllers/forms.js).</p>
+
+  <p>So let's just re-cap</p>
+
+  <ul>
+    <li>Add Last Name field</li>
+    <li>Have form save Decedent</li>
+  </ul>
+
+  <h4>Extra Credit</h4>
+
+  <p>On a successful save of the form it would be nice to show some sort of success message.  Our application already has <a href="https://ember-cli-notifications.netlify.app/">Ember Notifications</a> installed.  Please add a success message using this service when saving the form is successful.</p>
+</div>

@@ -1,0 +1,79 @@
+{{page-title "Forms"}}
+
+<div class="container">
+  <h1>Task: Submitting a Form</h1>
+
+  <p>Please add a last name field to the following form.  We will also need you to update the controller to save the decedent.</p>
+  
+  <p>Some hints:</p>
+
+  <ul>
+    <li>Make sure to use the ember <a href="https://guides.emberjs.com/v3.26.0/components/built-in-components/">Input component</a>. (with a capital I)</li>
+    <li>Update the <a href="https://guides.emberjs.com/v3.26.0/models/creating-updating-and-deleting-records/">save method</a>in the forms controller.  The argument provided is the data model for the form.</li>
+    <li>If you are doing the extra credit the toast service has already been injected into the controller.  Also make sure to properly wait for the save to resolve.</li>
+  </ul>
+
+  <h2>Create Decedent</h2>
+
+  <form 
+      method="post"
+      {{on "submit" this.submitSave}}>
+
+      <div class="row">
+        <div class="col-6 mb-3">
+          <label for="firstName"
+                class="form-label">
+              First Name
+          </label>
+          <Input
+              class="form-control"
+              id="firstName"
+              @value={{this.model.firstName}}/>
+        </div>
+
+        <div class="col-12 mb-3">
+          <label
+              for="location"
+              class="form-label">
+            Location
+          </label>
+          <Input
+              class="form-control"
+              id="location"
+              @value={{this.model.location}}/>
+        </div>
+
+        <div class="col-6 mb-3">
+          <label
+              for="nok"
+              class="form-label">
+            Next of Kin
+          </label>
+          <Input
+              class="form-control"
+              id="nok"
+              @value={{this.model.nextOfKin}}/>
+        </div>
+
+        <div class="col-6 mb-3">
+          <label
+              for="nokPhone"
+              class="form-label">
+            Next of Kin Phone #
+          </label>
+          <Input
+              class="form-control"
+              id="nokPhone"
+              @value={{this.model.nokPhoneNumber}}/>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <button
+            class="btn btn-primary"
+            type="submit">
+          Submit
+        </button>
+      </div>
+  </form>
+</div>

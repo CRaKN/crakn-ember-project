@@ -1,7 +1,36 @@
-{{page-title "CraknIntro"}}
+{{page-title "Crakn Intro Project"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<NotificationContainer @position="top-right" @zindex="9999"/>
 
-{{outlet}}
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <LinkTo @route="index" class="navbar-brand p-2" id="nav-logo">
+        <img src="/assets/images/logo.svg" alt="CRAKN">
+      </LinkTo>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <LinkTo @route="index" class="nav-link">Home</LinkTo>
+          </li>
+          <li class="nav-item">
+            <LinkTo @route="tables" class="nav-link">Tables &amp; Loops</LinkTo>
+          </li>
+          <li class="nav-item">
+            <LinkTo @route="forms" class="nav-link">Submitting Forms</LinkTo>
+          </li>
+          <li class="nav-item">
+            <a href="mailto:techinterviews@crakn.net" class="nav-link" target="_blank">Help</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{outlet}}
+</div>

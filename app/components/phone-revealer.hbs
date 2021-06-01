@@ -1,0 +1,17 @@
+<p>
+  {{#if this.show}}
+    <span>{{@phoneNumber}}</span>
+    <button
+        class="no-style"
+        {{on 'click' (fn this.toggle false)}}>
+      <MdIcon @icon="eye-off-outline"/>
+    </button>
+  {{else}}
+    <span>{{this.lastFour}}</span>
+    <button
+        class="no-style"
+        {{on 'click' (fn this.toggle true)}}>
+      <MdIcon @icon="eye-outline"/>
+    </button>
+  {{/if}}
+</p>
