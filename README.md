@@ -1,4 +1,4 @@
-# CRaKN Introduction Project
+# CRaKN Ember Project
 
 This is an evaulation project for Front-End positions at CRaKN.
 
